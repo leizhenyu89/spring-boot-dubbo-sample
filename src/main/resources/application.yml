@@ -1,0 +1,15 @@
+dubbo:
+  application:
+    logger: slf4j
+    name: DemoApplication
+  registry:
+    address: nacos://${nacos.address:127.0.0.1}:8848
+    register-mode: instance
+  protocol:
+    name: tri
+    port: 50051
+
+spring:
+  profiles:
+    include:
+      - secret
